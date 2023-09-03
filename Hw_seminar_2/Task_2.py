@@ -2,9 +2,11 @@
 # Программа должна возвращать сумму и произведение* дробей. Для проверки своего кода используйте модуль fractions.
 import math
 from fractions import Fraction
+
 def parse_fraction(fraction_str):
     numerator, denominator = map(int, fraction_str.split('/'))
     return numerator, denominator
+
 def sum_fractions(fraction1, fraction2):
     numerator1, denominator1 = fraction1
     numerator2, denominator2 = fraction2
@@ -15,6 +17,7 @@ def sum_fractions(fraction1, fraction2):
     sum_numerators //= gcd_value
     mult_denominators //= gcd_value
     return sum_numerators, mult_denominators
+
 def mult_fractions (fraction1, fraction2):
     numerator1, denominator1 = fraction1
     numerator2, denominator2 = fraction2
@@ -31,6 +34,7 @@ fraction_num_2 = input("Введите второе дробное число ф
 
 fraction1 = parse_fraction(fraction_num)
 fraction2 = parse_fraction(fraction_num_2)
+
 # сложение дробей
 sum_fraction = sum_fractions(fraction1, fraction2)
 # умножение дробей
