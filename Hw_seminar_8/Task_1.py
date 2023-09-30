@@ -38,7 +38,7 @@ quoting=csv.QUOTE_ALL)
             file_path = os.path.join(root, file)
             file_size = os.path.getsize(file_path)
             #print(len(path) * '---', file, 'Размер файла : ' ,file_size)
-            results.append({'Тип объекта': 'Папка', 'Название': file, 'Размер': file_size})
+            results.append({'Тип объекта': 'Файл', 'Название': file, 'Размер': file_size})
 
     save_results_as_json(results)
     save_results_as_csv(results)
